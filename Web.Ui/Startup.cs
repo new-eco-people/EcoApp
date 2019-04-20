@@ -48,21 +48,12 @@ namespace Web.Ui
             services                
                 // Handling Application Exceptions on the Web
                 .AddMvc(options => {
-                    // Kindly Remove the next line of code
-                    // options.Filters.Add(typeof(ValidateModelStateAttribute));
                     options.Filters.Add(typeof(WebCustomExceptionFilter));
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 // For performing validation of user data before using in the application
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RegisterUserValidator>());
-            
-            // Kindly Remove
-            // services.Configure<ApiBehaviorOptions>(options =>
-            // {
-            //     options.SuppressModelStateInvalidFilter = true;
-            // });
 
-            
             // Add DataContext implementation of Application interfaces
             services.ImplementApplicationDatabaseInterfaces();
 
