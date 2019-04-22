@@ -50,5 +50,5 @@ Follow these steps to get your development environment set up:
 
 Happy Coding...
 
-Cheers Excellence
+Cheers Eco Team
 

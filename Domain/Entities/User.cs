@@ -9,7 +9,6 @@ namespace Domain.Entities
         public ICollection<UserRole> UserRoles { get; set; }
 
         public UserDetail UserDetail { get; set; }
-        public OrganizationDetail OrganizationDetail { get; set; }
     
         public User()
         {
